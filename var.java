@@ -4,8 +4,17 @@ class VarDemo {
      * @param args
      */
     public static void main(String[] args) {
-        int x = 4320;
-        x = x / 1000 * 1000;
-        System.out.print(x);
+       int z = getResult(2, 4);
+        System.out.print(z);
+    }
+
+    /**
+     * 
+     * @param x
+     * @param y
+     * @return  
+     */
+    public static int getResult(int x, int y) {
+        return x*y;
     }
 }
