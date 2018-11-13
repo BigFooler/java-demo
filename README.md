@@ -72,7 +72,7 @@ class Student{
 }
 ```
 ```
-懒汉式(对象延迟加载)
+懒汉式(对象延迟加载,调用实例化方法时才实例化对象)
 class Single {
     private static Single s = null;
     private Single(){};
