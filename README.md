@@ -78,7 +78,11 @@ class Single {
     private Single(){};
     public static Single getInstance(){
         if (s === null){
-            s = new Single();
+            synchronized(Single.class){
+                if (s === null) {
+                    s = new Single();
+                }
+            }
         }
         return s;
     }
