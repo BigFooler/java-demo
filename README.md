@@ -113,4 +113,14 @@ class Single {
 - 被final修饰的变量只能被赋值一次 作为常量所有字母大写(SELF_PI),多个单词以下划线连接
 - 内部类定义在类中的局部位置时，只能访问该局部被final修饰的局部变量
 
+### 抽象类
+- 抽象方法必须定义在抽象类中，类和方法使用abstract修饰
+- 抽象类不可以使用new 实例化对象
+- 抽象类中的抽象方法必须在子类中全部被复写
+```
+abstract class Student {
+    abstract void study();
+}
+```
+
 
