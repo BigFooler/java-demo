@@ -123,4 +123,17 @@ abstract class Student {
 }
 ```
 
+### 模板模式
+- 定义一个算法的骨架，将骨架中的特定步骤延迟到子类中。模板方法模式使得子类可以不改变算法的结构即可重新定义该算法的某些特定步骤
+```
+abstract class GetTime{
+    public final void getTime(){
+        long start = System.currentTimeMills();
+        runcode();
+        long end = System.currentTimeMills();
+        System.out.println(end-start);
+    }
+    public abstract void runcode();
+}
+```
 
