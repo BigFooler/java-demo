@@ -137,3 +137,14 @@ abstract class GetTime{
 }
 ```
 
+### 接口
+```
+interface Inter{
+    public static final int x = 3;
+    public abstract void show();
+}
+```
+- 接口是一个由抽象方法组成的集合，使用interface定义，只能包含抽象的方法和常量
+- 接口不能被实例化，不能直接创建对象
+- 一个子类可以实现多个接口 通过implements去是实现
+- 接口与接口之间可以继承，而且可以多继承
