@@ -164,3 +164,5 @@ Cat c = Cat(a);
 
 ### instanceof
 - `c instancof Cat `
+
+### Object: 所有对象的父类
