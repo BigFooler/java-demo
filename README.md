@@ -180,3 +180,18 @@ Cat c = Cat(a);
 
 ### 异常处理 try catch finally
 - 自定义异常 自定义类继承自Exception
+
+### package
+- 对类文件进行分类管理
+- 给类提供多层命名空间
+- 写在程序文件的第一行
+- 类名的全称： 包名.类名
+- 包是一种封装形式 
+
+### protected
+- 包与包之间访问，被访问的包中类和成员需要被public修饰
+
+### import
+
+### jar 包
+- java的压缩包
