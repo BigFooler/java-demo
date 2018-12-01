@@ -2,6 +2,16 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ThreadDemo",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "ThreadDemo",
+            "args": ""
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - VarDemo",
             "request": "launch",
             "cwd": "${workspaceFolder}",

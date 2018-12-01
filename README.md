@@ -204,4 +204,43 @@ Cat c = Cat(a);
 - 继承Thread类：定义类继承Thread，并复写run方法（用于存储子类代码），创建实例对象并调用start方法（启动线程，调用run方法）
 - run方法用于存储线程要运行的代码
 - 定义类实现Runnable接口，复写run方法，使用Thread创建线程对象，并以Runnable接口的子对象为参数，调用start方法开启线程
-- 实现方式和继承方式的区别：
+- 实现方式和继承方式的区别：实现方式避免了单继承的局限性
+- 对于操作共享数据的线程，只能让一个线程执行完，再执行其他线程
+
+### 同步代码块，解决多线程安全问题（多个线程的共享数据操作使用同步）
+- 对象如同锁
+- 同步的前提：两个或者以上的线程，多个线程使用同一个锁
+ ```
+ synchronized(obj){ //obj 同步锁
+      
+ }
+ ```
+
+ ### 同步函数 
+ - 同步函数使用的锁是this
+ - 同步函数被static 修饰后使用的锁是该方法所在类的字节码文件对象（类名.class）
+
+ ```
+ class Single{
+     private static Single s = null;
+     private Single(){};
+     public static Single getInstence(){
+         if (s === null){
+            syncnorized(Single.class){
+                if (s === null) {
+                    s = new Single();
+                }
+            }
+         }
+        return s;
+     }
+ }
+ ```
+
+ ### 死锁
+ - 同步中嵌套同步，但是锁不同
+
+ ### 多线程通信
+ - 多个线程在操作相同的数据，但是操作的方式不同
+ - 等待唤醒机制
+ - Lock 
